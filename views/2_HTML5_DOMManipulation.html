@@ -8,10 +8,14 @@
         //    debugger;
             var outerDivElement=document.getElementById("outerDiv");
             debugger;
+          
+            var paragraph = document.createElement("p");
+            paragraph.innerText = "My new <p> element is appended in OuterDiv";
+            outerDiv.appendChild(paragraph);
+            debugger;
             var element=outerDivElement.insertBefore(document.createElement("article"),document.getElementById("innerDiv"));
-            element.innerText="This is an <article> element";
-            // debugger;
-            // 
+            element.innerText="This is an <article> element inserted before innerDiv";
+          
        }
     </script>
 </head>
@@ -25,11 +29,14 @@
             <li>Third List Item</li>
             <li>Fourth List Item</li>
         </ul>
+        
         <div id="innerDiv">
+            <h4 style="color:red">The innerDiv starts here</h4>
             <p class='subPara' id='P1'>Paragraph 1</p>
             <p class='subPara' id='P2'>Paragraph 2</p>
             <p class='subPara' id='P3'>Paragraph 3</p>
             <p class='subPara' id='P4'>Paragraph 4</p>
+            <h4 style="color:green">The innerDiv ends here</h4>
         </div>
         <table>
             <tr>
