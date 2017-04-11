@@ -3,20 +3,41 @@
 <head>
     <title>HTML5 DOM Manipulation</title>
     <script>
-       window.onload=function(){
-        //        var element = document.getElementById("innerDiv");
-        //    debugger;
-            var outerDivElement=document.getElementById("outerDiv");
-            debugger;
-          
+        window.onload = function () {
+            //        var element = document.getElementById("innerDiv");
+            //    debugger;
+            var outerDivElement = document.getElementById("outerDiv");
+            //debugger;
+
             var paragraph = document.createElement("p");
             paragraph.innerText = "My new <p> element is appended in OuterDiv";
             outerDiv.appendChild(paragraph);
-            debugger;
-            var element=outerDivElement.insertBefore(document.createElement("article"),document.getElementById("innerDiv"));
-            element.innerText="This is an <article> element inserted before innerDiv";
-          
-       }
+            //debugger;
+            var element = outerDivElement.insertBefore(document.createElement("article"), document.getElementById("innerDiv"));
+            element.innerText = "This is an <article> element inserted before innerDiv";
+            //debugger;
+            var innerDiv = document.getElementById("innerDiv");
+            var element = innerDiv.insertBefore(document.createElement("h2"), innerDiv.firstChild);
+            element.innerText = "This is an <h2> element inserted before first child of innerDiv"
+           // debugger;
+            // alert("childnodes of innerDiv are"+ innerDiv.childNodes);
+
+            innerDiv.removeChild(document.getElementById("P1"));
+
+            //debugger;
+            // innerDiv.remove(true);
+
+           /* var innerDiv = document.getElementById("innerDiv");
+            var newDiv = document.createElement("div");
+            for (var i = 0; i < innerDiv.childNodes.length; i++) {
+                var anchor = newDiv.appendChild(document.createElement("a"));
+                anchor.setAttribute("href", "http://www.bing.ca");
+                anchor.text = innerDiv.childNodes[i].textContent;
+                newDiv.appendChild(document.createElement("br"));
+                debugger;
+            }
+            innerDiv.replaceWith(newDiv);*/
+        }
     </script>
 </head>
 
@@ -29,7 +50,7 @@
             <li>Third List Item</li>
             <li>Fourth List Item</li>
         </ul>
-        
+
         <div id="innerDiv">
             <h4 style="color:red">The innerDiv starts here</h4>
             <p class='subPara' id='P1'>Paragraph 1</p>
