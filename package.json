@@ -1,0 +1,27 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gaurav Goyal",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravgoyal1911/FED_Certification.git"
+  },
+  "keywords": [
+    "HTML5",
+    "70-480"
+  ],
+  "bugs": {
+    "url": "https://github.com/gauravgoyal1911/FED_Certification/issues"
+  },
+  "homepage": "https://github.com/gauravgoyal1911/FED_Certification#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
