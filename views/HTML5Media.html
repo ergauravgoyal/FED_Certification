@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>
+        HTML5 Media
+    </title>
+    <script>
+        window.onload=function(){
+            video=document.getElementById("sampleVideo");
+        }
+        function play(){
+            video.play();
+        }
+        
+        function pause(){
+            video.pause();
+        }
+        
+        function back(){
+            video.currentTime -= 4;
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <video id="sampleVideo">
+                    <source src="../src/small-video.mp4" type="video/mp4" loop poster="../src/poster.jpg" height="800" width="600">/> Your browser does not support HTML5 video.
+                </video>
+            </td>
+            <td>
+                <img id="backButton" title="back" src="../images/backward.png" width="20px" onclick="back()"/> <br/>
+                <img id="backButton" title="play" src="../images/forward.png" width="20px" onclick="play()"/><br/>
+                <img id="backButton" title="pause" src="../images/media-pause.png" width="20px" onclick="pause()"/><br/>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
