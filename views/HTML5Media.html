@@ -4,20 +4,28 @@
     <title>
         HTML5 Media
     </title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script>
         window.onload=function(){
             video=document.getElementById("sampleVideo");
         }
         function play(){
+           // debugger;
+        //   $("#pauseBtn").css("display","none");
             video.play();
+            
         }
         
         function pause(){
-            video.pause();
+            //$("#playBtn").css("display","none");
+            video.pause();            
         }
         
         function back(){
             video.currentTime -= 4;
+        }
+         function forward(){
+            video.currentTime += 4;
         }
     </script>
 </head>
@@ -32,8 +40,10 @@
             </td>
             <td>
                 <img id="backButton" title="back" src="../images/backward.png" width="20px" onclick="back()"/> <br/>
-                <img id="backButton" title="play" src="../images/forward.png" width="20px" onclick="play()"/><br/>
-                <img id="backButton" title="pause" src="../images/media-pause.png" width="20px" onclick="pause()"/><br/>
+                <img id="playBtn" title="play" src="../images/play.png" width="20px" onclick="play()"/><br/>
+                <img id="pauseBtn" title="pause" src="../images/pause.png" width="20px" onclick="pause()"/><br/>
+                <img id="forwardBtn" title="pause" src="../images/forward.png" width="20px" onclick="forward()"/><br/>
+
             </td>
         </tr>
     </table>
