@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>My Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var drawingSurface = document.getElementById("drawingSurface");
+            var context = drawingSurface.getContext("2d");
+            context.beginPath();
+            context.moveTo(0, 0);
+            context.lineTo(500, 250);
+            context.stroke();
+        }
+    </script>
+</head>
+
+<body>
+    <canvas id="drawingSurface" width="400" height="400">
+        Canvas is not supported by your browser.Please update your browser.
+    </canvas>
+</body>
+
+</html>
